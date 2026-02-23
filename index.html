@@ -5,91 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josefo López - SEFO Analytics</title>
     <style>
-        /* Reset total para evitar espacios en blanco */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: sans-serif; 
             background-color: #f4f4f4; 
             display: flex; 
             justify-content: center; 
-            align-items: center;
-            min-height: 100vh;
-            padding: 15px;
+            padding: 20px;
         }
-
-        .card-container { 
+        .container { 
             width: 100%; 
             max-width: 450px; 
             background: white; 
             border-radius: 15px; 
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
-        /* Ajuste de la imagen PNG */
-        .card-image {
+        .card-img {
             width: 100%;
             display: block;
             height: auto;
+            /* BORDE TEMPORAL PARA PRUEBA: Si ves el borde pero no la foto, el nombre del archivo está mal */
+            border: 2px solid red; 
         }
-
-        .content {
+        .btn-area {
             padding: 20px;
-        }
-
-        .button-group { 
             display: flex;
             flex-direction: column;
-            gap: 12px; 
+            gap: 10px;
         }
-
-        .btn { 
+        .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 55px; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            font-size: 15px; 
+            height: 55px;
+            border-radius: 10px;
+            text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: 0.2s;
+            font-size: 14px;
         }
-
-        /* Colores de tu marca */
         .btn-green { background: #588157; color: white; }
-        .btn-black { background: #1d1d1b; color: white; }
-        .btn-save { background: #eeeeee; color: #333; border: 1px solid #ddd; }
-
-        .btn:active { transform: scale(0.98); }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 10px;
-            color: #999;
-            text-transform: uppercase;
-        }
+        .btn-dark { background: #1d1d1b; color: white; }
+        .btn-gray { background: #eee; color: #333; }
     </style>
 </head>
 <body>
 
-    <div class="card-container">
-        <img src="Front.png" class="card-image" alt="Josefo Lopez Business Card">
-        
-        <div class="content">
-            <div class="button-group">
-                <a href="tel:+15153393587" class="btn btn-green">Call Now</a>
-                <a href="mailto:josefo.la78@gmail.com" class="btn btn-green">Send Email</a>
-                <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-black">Visit Website</a>
-                <a href="contacto.vcf" download class="btn btn-save">Save Contact</a>
-            </div>
-        </div>
+<div class="container">
+    <img src="sefoanalytics_BC-01.png" class="card-img" alt="Business Card">
 
-        <footer>SEFO ANALYTICS LLC &copy; 2026</footer>
+    <div class="btn-area">
+        <a href="tel:+15153393587" class="btn btn-green">Call Now</a>
+        <a href="mailto:josefo.la78@gmail.com" class="btn btn-green">Email</a>
+        <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-dark">Website</a>
+        <a href="contacto.vcf" download class="btn btn-gray">Save Contact</a>
     </div>
+</div>
 
 </body>
 </html>
+
