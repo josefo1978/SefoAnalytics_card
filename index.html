@@ -33,15 +33,15 @@
             margin-bottom: 20px;
         }
 
-        /* Contenedor de botones */
+        /* Contenedor de botones superiores */
         .button-group {
             display: flex;
             gap: 10px;
             justify-content: center;
+            margin-bottom: 10px; /* Espacio para el botón de abajo */
         }
 
         .btn {
-            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,16 +54,31 @@
             transition: 0.2s;
         }
 
+        .btn-flex {
+            flex: 1;
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
         /* Botón Llamar (Verde) */
         .btn-call {
             background-color: #588157;
             color: white;
         }
 
-        /* Botón Guardar (Gris/Negro) */
+        /* Botón Guardar (Negro) */
         .btn-save {
             background-color: #1d1d1b;
             color: white;
+        }
+
+        /* Botón Trabajo (Gris Claro / Borde) */
+        .btn-work {
+            background-color: #ffffff;
+            color: #1d1d1b;
+            border: 2px solid #1d1d1b;
         }
 
         .btn:active {
@@ -77,13 +92,12 @@
         <img src="sefoanalytics_BC-01.png" alt="Business Card Josefo López">
 
         <div class="button-group">
-            <a href="tel:+15153393587" class="btn btn-call">Call Now</a>
-            <a href="contacto.vcf" download class="btn btn-save">Save Contact</a>
+            <a href="tel:+15153393587" class="btn btn-flex btn-call">Call Now</a>
+            <a href="contacto.vcf" download class="btn btn-flex btn-save">Save Contact</a>
         </div>
+        
+        <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-full btn-work">See my work</a>
     </div>
 
 </body>
 </html>
-
-
-
