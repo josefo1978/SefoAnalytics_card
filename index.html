@@ -1,29 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEFO Analytics - Business Card</title>
+    <title>Josefo López - SEFO Analytics</title>
     <style>
-        body { font-family: sans-serif; background-color: #ffffff; color: #2D2D2D; text-align: center; margin: 0; padding: 20px; }
-        .container { max-width: 400px; margin: auto; }
-        .logo { width: 150px; margin-top: 50px; }
-        h1 { font-size: 24px; margin: 20px 0 5px; }
-        p { color: #588157; font-weight: bold; margin-bottom: 30px; } /* Tu verde RGB 88, 129, 87 */
-        .btn { display: block; background-color: #588157; color: white; padding: 15px; margin: 10px 0; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .btn-secondary { background-color: #2D2D2D; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            padding: 15px;
+            min-height: 100vh;
+        }
+        .card-wrapper { 
+            width: 100%; 
+            max-width: 480px; 
+            background: white; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            align-self: center;
+        }
+        .card-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Esto ayuda a que el SVG no se vea borroso */
+            image-rendering: -webkit-optimize-contrast;
+        }
+        .buttons {
+            padding: 20px;
+            display: grid;
+            gap: 12px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 54px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .btn-green { background: #588157; color: white; }
+        .btn-black { background: #1d1d1b; color: white; }
+        .btn-save { background: #eee; color: #333; border: 1px solid #ddd; }
+        .btn:active { transform: scale(0.98); }
+        
+        footer { text-align: center; padding: 15px; color: #999; font-size: 10px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.svg" alt="SEFO Analytics" class="logo">
-        <h1>Josefo López Aguirre</h1>
-        <p>Neuromarketing & Consumer Insights Specialist</p>
-        
-        <a href="tel:+123456789" class="btn">Llamar ahora</a>
-        <a href="mailto:tuemail@dominio.com" class="btn">Enviar Email</a>
-        <a href="https://www.tuweb.com" class="btn btn-secondary">Visitar Web</a>
-        <a href="contacto.vcf" class="btn" style="background-color: #d4d4d4; color: #2d2d2d;">Añadir a Contactos</a>
+
+<div class="card-wrapper">
+    <img src="sefoanalytics_BC.svg" alt="Josefo Lopez">
+
+    <div class="buttons">
+        <a href="tel:+15153393587" class="btn btn-green">Call Now</a>
+        <a href="mailto:josefo.la78@gmail.com" class="btn btn-green">Email</a>
+        <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-black">Visit Website</a>
+        <a href="contacto.vcf" download class="btn btn-save">Save Contact</a>
     </div>
+
+    <footer>SEFO ANALYTICS LLC &copy; 2026</footer>
+</div>
+
 </body>
 </html>
