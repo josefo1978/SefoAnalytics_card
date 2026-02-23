@@ -12,21 +12,20 @@
             background-color: #f0f2f5; 
             display: flex; 
             justify-content: center; 
-            padding: 10px;
+            padding: 15px;
             min-height: 100vh;
         }
 
         .container { 
             width: 100%; 
-            max-width: 450px; 
+            max-width: 400px; /* Contenedor un poco más estrecho para que se vea más estilizado */
             background: white; 
             border-radius: 12px; 
             overflow: hidden; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             align-self: center;
         }
 
-        /* Imagen de la tarjeta */
         .card-img {
             width: 100%;
             height: auto;
@@ -34,38 +33,39 @@
         }
 
         .actions {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dos botones por fila para ahorrar espacio vertical */
+            gap: 8px;
         }
 
-        /* Botón Estilo Normal */
+        /* Botones más pequeños */
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 55px;
-            border-radius: 8px;
+            height: 40px; /* Altura reducida */
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             text-transform: uppercase;
-            font-size: 14px;
-            transition: background 0.2s, transform 0.1s;
+            font-size: 11px; /* Texto más pequeño */
+            transition: 0.2s;
         }
 
-        .btn:active { transform: scale(0.98); }
+        .btn:active { transform: scale(0.96); }
 
-        /* Colores */
+        /* El botón de Website y Save Contact ocuparán el ancho completo abajo si quieres, 
+           o los dejamos todos en cuadrícula. Aquí los puse en pares: */
         .btn-green { background: #588157; color: white; }
         .btn-black { background: #1d1d1b; color: white; }
         .btn-save { background: #f0f0f0; color: #333; border: 1px solid #ddd; }
 
         footer {
             text-align: center;
-            padding: 15px;
-            color: #999;
-            font-size: 10px;
+            padding: 10px;
+            color: #bbb;
+            font-size: 9px;
             letter-spacing: 1px;
         }
     </style>
@@ -73,13 +73,13 @@
 <body>
 
 <div class="container">
-    <img src="Front.png" class="card-img" alt="Josefo Lopez Aguirre">
+    <img src="Front.png" class="card-img" alt="Josefo Lopez">
 
     <div class="actions">
         <a href="tel:+15153393587" class="btn btn-green">Call Now</a>
         <a href="mailto:josefo.la78@gmail.com" class="btn btn-green">Email</a>
-        <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-black">Visit Website</a>
-        <a href="contacto.vcf" download class="btn btn-save">Save Contact</a>
+        <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-black">Website</a>
+        <a href="contacto.vcf" download class="btn btn-save">Save Info</a>
     </div>
 
     <footer>SEFO ANALYTICS LLC &copy; 2026</footer>
@@ -87,3 +87,4 @@
 
 </body>
 </html>
+
