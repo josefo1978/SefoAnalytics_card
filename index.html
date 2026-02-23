@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josefo López - SEFO Analytics</title>
     <style>
-        /* Centrado absoluto */
+        /* Centrado absoluto y limpieza */
         body, html {
             margin: 0;
             padding: 0;
@@ -14,35 +14,73 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff; /* Fondo blanco limpio */
+            background-color: #f8f9fa; 
+            font-family: -apple-system, system-ui, sans-serif;
         }
 
         .card-container {
-            width: 90%; /* Deja un pequeño margen a los lados en el celular */
-            max-width: 600px; /* Evita que se vea gigante en una computadora */
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
         }
 
         img {
             width: 100%;
-            height: auto; /* Mantiene la proporción horizontal */
+            height: auto;
             display: block;
-            border-radius: 4px; /* Un toque sutil de diseño */
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Le da profundidad */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor de botones */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+
+        /* Botón Llamar (Verde) */
+        .btn-call {
+            background-color: #588157;
+            color: white;
+        }
+
+        /* Botón Guardar (Gris/Negro) */
+        .btn-save {
+            background-color: #1d1d1b;
+            color: white;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
         }
     </style>
 </head>
 <body>
 
     <div class="card-container">
-        <img src="BC.tif" alt="Business Card Josefo López">
+        <img src="sefoanalytics_BC-01.jpg" alt="Business Card Josefo López">
+
+        <div class="button-group">
+            <a href="tel:+15153393587" class="btn btn-call">Call Now</a>
+            <a href="contacto.vcf" download class="btn btn-save">Save Contact</a>
+        </div>
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
