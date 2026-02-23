@@ -12,51 +12,50 @@
             background-color: #f0f2f5; 
             display: flex; 
             justify-content: center; 
+            align-items: center;
             padding: 15px;
             min-height: 100vh;
         }
 
         .container { 
             width: 100%; 
-            max-width: 400px; /* Contenedor un poco más estrecho para que se vea más estilizado */
+            max-width: 400px; 
             background: white; 
             border-radius: 12px; 
             overflow: hidden; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            align-self: center;
         }
 
         .card-img {
             width: 100%;
             height: auto;
             display: block;
+            border: none; /* Asegura que no haya bordes de prueba */
         }
 
         .actions {
             padding: 15px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Dos botones por fila para ahorrar espacio vertical */
+            grid-template-columns: 1fr 1fr; /* Dos botones por fila */
             gap: 8px;
         }
 
-        /* Botones más pequeños */
+        /* Botones pequeños y estilizados */
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 40px; /* Altura reducida */
+            height: 38px; /* Altura reducida */
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 11px; /* Texto más pequeño */
+            font-size: 10px; /* Texto pequeño */
             transition: 0.2s;
         }
 
         .btn:active { transform: scale(0.96); }
 
-        /* El botón de Website y Save Contact ocuparán el ancho completo abajo si quieres, 
-           o los dejamos todos en cuadrícula. Aquí los puse en pares: */
         .btn-green { background: #588157; color: white; }
         .btn-black { background: #1d1d1b; color: white; }
         .btn-save { background: #f0f0f0; color: #333; border: 1px solid #ddd; }
@@ -73,7 +72,7 @@
 <body>
 
 <div class="container">
-    <img src="Front.png" class="card-img" alt="Josefo Lopez">
+    <img src="Front.png" class="card-img" alt="Josefo Lopez Aguirre">
 
     <div class="actions">
         <a href="tel:+15153393587" class="btn btn-green">Call Now</a>
@@ -87,4 +86,3 @@
 
 </body>
 </html>
-
