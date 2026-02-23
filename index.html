@@ -5,67 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josefo López - SEFO Analytics</title>
     <style>
+        /* Limpieza de márgenes */
         * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body { 
-            font-family: sans-serif; 
-            background-color: #f0f2f5; 
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f4f4; 
             display: flex; 
             justify-content: center; 
-            padding: 15px;
+            padding: 10px;
+            min-height: 100vh;
         }
-        .card-wrapper { 
+
+        .main-card { 
             width: 100%; 
-            max-width: 480px; 
-            background: white; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 450px; 
+            background: #ffffff; 
+            border-radius: 16px; 
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            align-self: center;
         }
-        .card-wrapper img {
+
+        /* Contenedor del SVG */
+        .image-container {
+            width: 100%;
+            background-color: #fff;
+            line-height: 0; /* Elimina espacio extra debajo de la imagen */
+        }
+
+        .image-container img {
             width: 100%;
             height: auto;
             display: block;
         }
-        .buttons {
+
+        /* Botones */
+        .actions {
             padding: 20px;
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 12px;
         }
-        .btn {
+
+        .btn { 
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 54px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
+            height: 55px;
+            text-decoration: none; 
+            border-radius: 10px; 
+            font-size: 15px; 
+            font-weight: 700;
             text-transform: uppercase;
-            font-size: 14px;
-            transition: 0.2s;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
         }
-        .btn-green { background: #588157; color: white; }
-        .btn-black { background: #1d1d1b; color: white; }
-        .btn-save { background: #eee; color: #333; border: 1px solid #ddd; }
-        
+
+        .btn-primary { background: #588157; color: white; }
+        .btn-secondary { background: #1d1d1b; color: white; }
+        .btn-light { background: #f0f0f0; color: #333; border: 1px solid #ddd; }
+
         .btn:active { transform: scale(0.98); }
-        
-        footer { text-align: center; padding: 15px; color: #999; font-size: 10px; }
+
+        footer {
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 11px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
 
-<div class="card-wrapper">
-    <img src="sefoanalytics_BC.png" alt="Josefo Lopez">
+    <div class="main-card">
+        <div class="image-container">
+            <img src="sefoanalytics_BC.svg" alt="Josefo Lopez Business Card">
+        </div>
+        
+        <div class="actions">
+            <a href="tel:+15153393587" class="btn btn-primary">Call Now</a>
+            <a href="mailto:josefo.la78@gmail.com" class="btn btn-primary">Send Email</a>
+            <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-secondary">Visit Website</a>
+            <a href="contacto.vcf" download class="btn btn-light">Save Contact</a>
+        </div>
 
-    <div class="buttons">
-        <a href="tel:+15153393587" class="btn btn-green">Call Now</a>
-        <a href="mailto:josefo.la78@gmail.com" class="btn btn-green">Email</a>
-        <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-black">Visit Website</a>
-        <a href="contacto.vcf" download class="btn btn-save">Save Contact</a>
+        <footer>SEFO ANALYTICS LLC &copy; 2026</footer>
     </div>
-
-    <footer>SEFO ANALYTICS LLC &copy; 2026</footer>
-</div>
 
 </body>
 </html>
