@@ -5,98 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josefo López - SEFO Analytics</title>
     <style>
-        /* Reset de márgenes para ganar espacio */
+        /* Reset para evitar espacios fantasma */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body { 
-            font-family: 'Helvetica', Arial, sans-serif; 
-            background-color: #ebebeb; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background-color: #f0f0f0; 
             display: flex; 
             justify-content: center; 
-            padding: 10px;
+            align-items: center; 
             min-height: 100vh;
-            align-items: center;
+            padding: 15px;
         }
 
-        .main-wrapper { 
+        .main-container { 
             width: 100%; 
-            max-width: 450px; 
+            max-width: 440px; 
             background: #ffffff; 
-            border-radius: 16px; 
-            padding: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border-radius: 20px; 
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Espacio máximo para tu Business Card */
-        .card-container {
+        /* Contenedor de la Business Card (PNG) */
+        .card-view {
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .card-container img {
+        .card-view img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px; /* Opcional: redondea un poco los filos del PNG */
+            border-radius: 10px;
+            /* Asegúrate de que el PNG no tenga bordes transparentes extra */
         }
 
-        /* Grid de botones pequeños en inglés */
-        .actions-grid { 
+        /* Grid de 3 botones iguales */
+        .button-group { 
             display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 8px; 
+            grid-template-columns: 1fr; /* Un botón por fila en móvil para máxima claridad */
+            gap: 10px; 
         }
+
+        /* Si prefieres 2 arriba y 1 abajo, usa: grid-template-columns: 1fr 1fr; */
 
         .btn { 
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 44px; /* Tamaño estándar de pulgar pero compacto */
-            background: #588157; 
+            height: 50px;
+            background: #588157; /* El verde de tu logo */
             color: white; 
             text-decoration: none; 
-            border-radius: 8px; 
-            font-size: 13px; 
+            border-radius: 10px; 
+            font-size: 14px; 
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            transition: background 0.3s;
         }
 
-        .btn-dark { background: #1d1d1b; }
+        .btn:active {
+            background: #466645;
+            transform: scale(0.98);
+        }
 
-        .btn-save { 
-            grid-column: span 2; 
-            background: #f4f4f4; 
-            color: #1d1d1b;
-            border: 1px solid #ddd;
-            margin-top: 4px;
+        .btn-dark {
+            background: #1d1d1b;
         }
 
         footer {
             text-align: center;
-            margin-top: 15px;
-            font-size: 10px;
-            color: #999;
-            text-transform: uppercase;
+            margin-top: 20px;
+            font-size: 11px;
+            color: #aaa;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <div class="card-container">
-            <img src="sefoanalytics_BC.png" alt="Josefo Lopez Business Card">
+    <div class="main-container">
+        <div class="card-view">
+            <img src="sefoanalytics_BC.png" alt="Sefo Analytics Business Card">
         </div>
         
-        <div class="actions-grid">
+        <div class="button-group">
             <a href="tel:+15153393587" class="btn">Call Now</a>
             <a href="mailto:josefo.la78@gmail.com" class="btn">Send Email</a>
-            <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-dark">Website</a>
-            <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="btn btn-dark">LinkedIn</a>
-            <a href="contacto.vcf" download class="btn btn-save">Save to Contacts</a>
+            <a href="https://www.sefoanalytics.com" target="_blank" class="btn btn-dark">Visit Website</a>
+            <a href="contacto.vcf" download class="btn btn-dark">Save Contact</a>
         </div>
 
-        <footer>Sefo Analytics &copy; 2026</footer>
+        <footer>SEFO ANALYTICS &copy; 2026</footer>
     </div>
 
 </body>
